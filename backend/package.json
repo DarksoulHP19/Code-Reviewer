@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is code  reviewer app backend",
+  "keywords": [
+    "code",
+    "reviewer"
+  ],
+  "homepage": "https://github.com/DarksoulHP19/Code-Reviewer#readme",
+  "bugs": {
+    "url": "https://github.com/DarksoulHP19/Code-Reviewer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarksoulHP19/Code-Reviewer.git"
+  },
+  "license": "ISC",
+  "author": "DarksoulHP19",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {}
+}
