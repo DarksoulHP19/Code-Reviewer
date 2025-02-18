@@ -30,6 +30,9 @@ function App() {
 
   return (
     <>
+     <h1>Code-Reviewer 🧑‍💻</h1>
+
+     <marquee> Please check your code is how much efficient ,and understand your code.</marquee>
      <main>
         <div className="left">
             <div className="code">

@@ -3,22 +3,22 @@
 - code review app for  code checking and code review.
 
 ## Table of Contents
-1. [Introduction](##introduction)
-2. [Features](##features)
-3. [Installation](##installation)
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
 
 
-## Introduction
+# Introduction
 Code-Reviewer is a code review app that helps you check your code for best practices, readability, potential issues, and maintainability. It provides feedback on your code snippets, focusing on various aspects such as variable declarations, naming conventions, code structure, and more.
 
-## Features
+# Features
 - Code review for best practices, readability, potential issues, and maintainability
 - Feedback on variable declarations, naming conventions, code structure, and more
 
 
-## Installation
+# Installation
 - This application is devloped in  Mern stack + google gemini api key.so during these repo you need to add your own google gemini api key.
-- note :- i use google gemini flash model fort this app so you need to add your own google gemini api key in the .env file.
+- note :- i use google gemini flash model for this app so you need to add your own google gemini api key in the .env file.
 
 ### steps to install
 - clone the repo
@@ -46,7 +46,7 @@ $ npm install
 - now at backend directory create a .env file and add your google gemini api key in it.
 
 ```bash
-GOOGLE_GEMINI_API_KEY=your_google_gemini_api_key
+GOOGLE_GEMINI_API_KEY=<your google gemini flash model api key>
 ```
 
 - now start the backend server and  frontend server
@@ -58,5 +58,8 @@ $ npm start
 ..frontend
 $ npm run dev
 ```
+
+-----------------------------
+# Screenshots
 
 
