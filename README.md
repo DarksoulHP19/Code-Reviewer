@@ -46,7 +46,7 @@ $ npm install
 - now at backend directory create a .env file and add your google gemini api key in it.
 
 ```bash
-GOOGLE_GEMINI_API_KEY=<your google gemini flash model api key>
+GOOGLE_GEMINI_KEY=<your google gemini flash model api key>
 ```
 
 - now start the backend server and  frontend server
@@ -61,5 +61,10 @@ $ npm run dev
 
 -----------------------------
 # Screenshots
+![image](https://github.com/user-attachments/assets/a24a08d7-82d5-460f-af99-8bdee5017e23)
+![image](https://github.com/user-attachments/assets/306203a5-d434-4ff0-8475-4b73cec7c7d1)
+
+
+
 
 
