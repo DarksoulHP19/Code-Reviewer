@@ -69,7 +69,12 @@ $ npm run dev
 
 -----------------------------
 # Screenshots
+1. Base UI :-
 
+![Screenshot 2025-04-27 195559](https://github.com/user-attachments/assets/4f72f5a5-8b0d-44ce-b24d-cf93396fe988)
+
+2. With Response :-
+![image](https://github.com/user-attachments/assets/666d6a12-e74e-49d5-83c8-8b7209b9fc3d)
 
 
 
