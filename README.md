@@ -39,17 +39,25 @@ $ npm install
 
 // go back to the root directory and make another tab in terminal.
 
+$ cd ..
 $ cd frontend
 $ npm install
 ```
 
-- now at backend directory create a .env file and add your google gemini api key in it.
+- now at backend & frontend directory create a .env file and 
 
+- backend/.env file
 ```bash
-GOOGLE_GEMINI_API_KEY=<your google gemini flash model api key>
+GOOGLE_GEMINI_KEY=<your google gemini flash model api key>
 ```
 
-- now start the backend server and  frontend server
+- frontend/.env file
+```bash
+VITE_BEND_API = "http://localhost:3000/ai/get-review"   #This is for the local server.
+
+````
+
+- now go to frontend and backend directory and  start the backend server and  frontend server
 
 ```bash
 ..backend
@@ -61,5 +69,8 @@ $ npm run dev
 
 -----------------------------
 # Screenshots
+
+
+
 
 

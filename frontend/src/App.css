@@ -1,69 +1,306 @@
+/* Reset */
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 
 html,
 body,
 #root {
   height: 100%;
   width: 100%;
-}
-h1{
-  text-align: center;
-  
-}
-marquee{
-  color: rgb(255, 0, 0);
-  font-size: 20px;
+  font-family: 'Fira Code', 'Fira Mono', monospace;
+  background-color: #1c1c1e;
+  color: #ffffff;
 }
 
+/* ----------- Header Section ----------- */
+/* header {
+  width: 100%;
+  padding: 1.5rem 2rem 1rem 2rem;
+  background: linear-gradient(135deg, #2b2b2f, #111112);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border-bottom: 2px solid #7b2ff7;
+  margin-bottom: 1rem;
+  animation: fadeSlideIn 1s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3, #7b2ff7);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite, headerGlow 2s ease-in-out infinite alternate;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth Scrolling Text (Replaces Marquee) */
+/*header .scroll-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  color: #ff5555;
+} */
+
+
+header {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #111112;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border-bottom: 2px solid #7b2ff7;
+  margin-bottom: 1rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  background: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff; /* normal white */
+}
+
+header h1:hover {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* gradient fill on hover */
+  color: transparent;
+}
+/* Optional: Keep simple smooth scroll text if needed */
+header .scroll-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ff5555;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ----------- Main Section ----------- */
 main {
-  height: 100%;
+  height: calc(100% - 7rem);
   width: 100%;
   padding: 1.5rem;
   display: flex;
   gap: 1rem;
-}
-
-main .left,
-main .right{
-  height: 100%;
-  flex-basis: 50%;
-  border-radius: 0.7rem;
-  overflow: auto;
-  color: #ffffff;
-}
-
-main .left{
-  background-color: black;
+  animation: fadeSlideIn 1.5s ease-out forwards;
   position: relative;
 }
 
-.left .code, .code pre, .code pre code {
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 1rem;
+  overflow: auto;
+  background-color: #2b2b2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+main .left:hover,
+main .right:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Animated Divider Line */
+main::before {
+  content: "";
+  width: 3px;
+  background: linear-gradient(180deg, #7b2ff7, #f107a3, #7b2ff7);
+  background-size: 300% 300%;
+  animation: animateDivider 5s ease infinite;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Code Editor Area */
+main .left {
+  background-color: #111112;
+  z-index: 2;
+}
+
+.left .code,
+.code pre,
+.code pre code {
   height: 100%;
   width: 100%;
   margin: 0;
-  border-radius: .7rem;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
+/* Review Button */
 main .left .review {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: rgb(153, 66, 175);
-  color: #000000;
-  padding: 0.5rem 2rem;
-  font-weight: 500;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 0.7rem 2.7rem;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
   user-select: none;
-  border-radius: 0.7rem;
-}
-main .right{
-  background-color: rgb(36, 37, 39);
-  padding: 1rem 2rem ;
-  font-size: 1.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  animation: floatButton 3s ease-in-out infinite, pulse 2s infinite;
+  letter-spacing: 0.5px;
+  z-index: 2;
 }
 
+main .left .review:hover {
+  background: linear-gradient(135deg, #f107a3, #7b2ff7);
+  transform: scale(1.08);
+}
+
+/* Output Area */
+main .right {
+  background-color: #242527;
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  z-index: 2;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Placeholder when no review yet */
+main .right:empty::before {
+  content: "Your code review will appear here...";
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+/* Scrollbar Styling */
+main .left::-webkit-scrollbar,
+main .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+main .left::-webkit-scrollbar-thumb,
+main .right::-webkit-scrollbar-thumb {
+  background: linear-gradient(#7b2ff7, #f107a3);
+  border-radius: 10px;
+}
+
+main .left::-webkit-scrollbar-track,
+main .right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ----------- Animations ----------- */
+@keyframes shine {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating Review Button Animation */
+@keyframes floatButton {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Divider Animation */
+@keyframes animateDivider {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Neon Glow */
+@keyframes headerGlow {
+  0% { text-shadow: 0 0 10px #7b2ff7, 0 0 20px #f107a3; }
+  100% { text-shadow: 0 0 20px #7b2ff7, 0 0 30px #f107a3; }
+}
+
+/* Fade In Review Panel */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loader Spinner (optional) */
+.loader {
+  border: 3px solid #333;
+  border-top: 3px solid #f107a3;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* ----------- Responsive Design ----------- */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  main .left,
+  main .right {
+    flex-basis: 100%;
+    height: 50%;
+  }
+}
